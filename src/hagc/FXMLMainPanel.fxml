@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hagc.FXMLMainPanelController">
+   <children>
+      <VBox layoutX="12.0" layoutY="7.0" prefHeight="362.0" prefWidth="519.0">
+         <children>
+            <TitledPane animated="false" collapsible="false" prefHeight="128.0" prefWidth="555.0" text="hAGC">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="102.0" prefWidth="341.0">
+                     <children>
+                        <Button fx:id="serialConnectButton" layoutX="14.0" layoutY="52.0" mnemonicParsing="false" onAction="#serialConnect" text="Connect" />
+                        <Button fx:id="serialDisonnectButton" disable="true" layoutX="89.0" layoutY="52.0" mnemonicParsing="false" onAction="#serialDisconnect" text="Disconnect" />
+                        <Button fx:id="refreshButton" disable="true" layoutX="171.0" layoutY="14.0" mnemonicParsing="false" onAction="#refreshSerialPort" text="Refresh" />
+                        <TextArea fx:id="trololo" editable="false" layoutX="259.0" layoutY="9.0" prefHeight="86.0" prefWidth="246.0" />
+                        <ComboBox fx:id="serialComComboBox" layoutX="7.0" layoutY="15.0" onShowing="#autoRefreshSerialPort" prefWidth="150.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </TitledPane>
+            <TitledPane animated="false" collapsible="false" text="yaAGC">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="276.0">
+                     <children>
+                        <TextField fx:id="ipAddressTextField" layoutX="14.0" layoutY="14.0" promptText="IP address" text="localhost" />
+                        <TextField fx:id="portTextField" layoutX="174.0" layoutY="14.0" promptText="port" text="19700" />
+                        <Button fx:id="yaAgcConnectButton" layoutX="14.0" layoutY="46.0" mnemonicParsing="false" onAction="#yaAgcConnect" text="Connect" />
+                        <Button fx:id="yaAgcDisconnectButton" disable="true" layoutX="89.0" layoutY="46.0" mnemonicParsing="false" onAction="#yaAgcDisconnect" text="Disconnect" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </TitledPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
